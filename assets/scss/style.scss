@@ -30,6 +30,24 @@ $lightgray: #e3e3e3;
     color: $white;
     cursor: pointer;
 }
+@mixin cover($height) {
+        position: relative;
+        width: 100%;
+        padding-top: $height;
+        img, .content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }  
+}
+%container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .btn{
     &.orange{
         @include button($orange);
@@ -45,7 +63,6 @@ $lightgray: #e3e3e3;
     }
 }
 
-
 p{
     @include font(400);
 }
@@ -54,4 +71,85 @@ h1,h2,h3{
 }
 h4{
     @include font(700);
+}
+section{
+    margin-bottom: 80px;
+}
+.wrapper{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+header{
+    @extend %container;
+    padding: 38px 0;
+    .burger-menu{
+        padding: 5px;
+        border-radius: 5px;
+        transition: 0.5s;
+        &:hover{
+            background-color: #ef5da856;
+            cursor: pointer;
+        }
+        .line{
+            width: 18px;
+            height: 2px;
+            background-color: $mainBlack;
+            margin-bottom: 5px;
+            &:last-child{
+                margin-bottom: 0;
+
+            }
+        }
+    }
+    .active{
+        color: $pink;
+        fill: $orange;
+    }
+   nav{
+        a{
+            margin-left: 20px;
+        }
+   }
+    path{
+        transition: 0.5s;
+        fill: $mainBlack;
+        &:hover{
+            fill:#FF3D00
+        }
+    }
+}
+.main{
+    @extend %container;
+    .rectangle{ 
+        &.cover{
+            @include cover(25%);
+            width: 48%;
+            background-color: $blue;
+            border-radius: 8px;
+            img{
+                border-radius: 8px;
+            }
+        }
+        h2{
+            font-size: 20px;
+            color: $white;
+            margin: 38px 55px;
+        }
+    }
+    
+}
+.cards{
+    @extend %container;
+    .card{
+        width: 18%;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        .cover{
+            @include cover(100%);
+            img{
+                border-radius: 8px 8px 0 0;
+            }
+        }
+    }
 }

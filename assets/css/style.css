@@ -17,6 +17,12 @@ input[type=text] {
   background-color: transparent;
 }
 
+.cards, .main, header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .btn.orange {
   border: 1px solid #FF3D00;
   color: #FF3D00;
@@ -85,6 +91,99 @@ h1, h2, h3 {
 h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 38px 0;
+}
+header .burger-menu {
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+header .burger-menu:hover {
+  background-color: rgba(239, 93, 168, 0.337254902);
+  cursor: pointer;
+}
+header .burger-menu .line {
+  width: 18px;
+  height: 2px;
+  background-color: #202020;
+  margin-bottom: 5px;
+}
+header .burger-menu .line:last-child {
+  margin-bottom: 0;
+}
+header .active {
+  color: #EF5DA8;
+  fill: #FF3D00;
+}
+header nav a {
+  margin-left: 20px;
+}
+header path {
+  transition: 0.5s;
+  fill: #202020;
+}
+header path:hover {
+  fill: #FF3D00;
+}
+
+.main .rectangle.cover {
+  position: relative;
+  width: 100%;
+  padding-top: 25%;
+  width: 48%;
+  background-color: #0085FF;
+  border-radius: 8px;
+}
+.main .rectangle.cover img, .main .rectangle.cover .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main .rectangle.cover img {
+  border-radius: 8px;
+}
+.main .rectangle h2 {
+  font-size: 20px;
+  color: #fff;
+  margin: 38px 55px;
+}
+
+.cards .card {
+  width: 18%;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+.cards .card .cover {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+.cards .card .cover img, .cards .card .cover .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cards .card .cover img {
+  border-radius: 8px 8px 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */
