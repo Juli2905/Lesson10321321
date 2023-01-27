@@ -48,6 +48,17 @@ $lightgray: #e3e3e3;
     justify-content: space-between;
     align-items: center;
 }
+%form-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $lightgray;
+    border-radius: 8px;
+    background: $white;
+    
+}
+
 .btn{
     &.orange{
         @include button($orange);
@@ -72,6 +83,7 @@ h1,h2,h3{
 h4{
     @include font(700);
 }
+
 section{
     margin-bottom: 80px;
 }
@@ -154,6 +166,40 @@ header{
         }
         .card-content{
             padding: 10px 10px;
+            .title{
+                margin-bottom: 14px;
+            }
+            .desc{
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+            .duration{
+                font-size: 10px;
+                margin-bottom: 8px;
+            }
         }
     }
+}
+.main-form{
+    form{
+        @extend %form-container;
+        width: 35%;
+        margin: 0 auto;
+        padding: 15px 20px 25px 20px;
+        h2{
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        input[type="text"]{
+            margin-bottom: 10px;
+            width: 95%;
+            border: 1px solid $lightgray;
+            border-radius: 6px;
+            padding: 7px 11px;
+            @include font(700);
+            font-size: 10px;
+        }
+    }
+    
+
 }

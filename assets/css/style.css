@@ -23,6 +23,16 @@ input[type=text] {
   align-items: center;
 }
 
+.main-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  background: #fff;
+}
+
 .btn.orange {
   border: 1px solid #FF3D00;
   color: #FF3D00;
@@ -188,6 +198,37 @@ header path:hover {
 }
 .cards .card .card-content {
   padding: 10px 10px;
+}
+.cards .card .card-content .title {
+  margin-bottom: 14px;
+}
+.cards .card .card-content .desc {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.cards .card .card-content .duration {
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+.main-form form {
+  width: 35%;
+  margin: 0 auto;
+  padding: 15px 20px 25px 20px;
+}
+.main-form form h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.main-form form input[type=text] {
+  margin-bottom: 10px;
+  width: 95%;
+  border: 1px solid #e3e3e3;
+  border-radius: 6px;
+  padding: 7px 11px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
