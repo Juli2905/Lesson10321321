@@ -100,6 +100,7 @@ section {
 .wrapper {
   max-width: 1300px;
   margin: 0 auto;
+  background-color: #F7F7F7;
 }
 
 header {
@@ -184,6 +185,9 @@ header path:hover {
 }
 .cards .card .cover img {
   border-radius: 8px 8px 0 0;
+}
+.cards .card .card-content {
+  padding: 10px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
